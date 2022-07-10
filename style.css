@@ -1,0 +1,92 @@
+/* Header and score Font */
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5;
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+h1 {
+    text-decoration: 3px underline black;
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+    color:rgb(205, 167, 121);
+}
+
+.header-paragraph {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+/* Scoreboard */
+h4 {
+    font-size: 20px;
+}
+.game-message-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size: 35px;    
+}
+
+.scoreBoard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 150px;
+}
+
+.score {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size: 50px;
+    color:rgb(205, 167, 121);
+}
+
+/* Buttons */
+.paper-btn {
+    margin: 0 20px;
+}
+
+.buttons {
+ display: flex;
+ justify-content: center;
+ margin-top: 80px;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 2px 20px ;
+    font-size: 100px;
+   text-shadow: 2px 2px 4px #000000;
+}
+
+.btn:hover {
+    background-color:rgb(205, 167, 121);
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+

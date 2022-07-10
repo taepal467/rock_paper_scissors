@@ -5,9 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/dacbe61b88.js" crossorigin="anonymous"></script>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <h2>Choose your weapon</h2>
+        <p class="header-paragraph">First to get 5 points wins!</p>
+    </header>
+    <main>
+        <div class="game-message-display">
+            <h3>[Display messages here]</h3>
+        </div> 
+        <div class="scoreBoard">
+            <div class="left-column">
+                <p>[insert selected emoji here]</p>
+                <h4>Your Score: <span class="score">0</span></h4>
+            </div>
+          
+            <div class="right-column">
+                <p>[insert selected emoji here]</p>
+                <h4>Computer's Score: <span class="score">0</span></h4>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn rock-btn">🪨</button>
+            <button class="btn paper-btn">📜</button>
+            <button class="btn scissors-btn">✂</button>
+        </div>
+    </main>
+    <div class="footer-section">
+        <footer>&copy;2022 Created by taepal467
+            <a href="https://github.com/taepal467" target="_blank"> <i class="fa-brands fa-github"></i></a>
+        </footer>
+       
+    </div>
+  
+    <script src="app.js"></script>
 </body>
 </html>
