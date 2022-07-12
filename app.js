@@ -1,105 +1,80 @@
-const computerPlay = () => {
-  let gameChoices = ["Rock", "Paper", "Scissors"];
+const buttons = document.getElementsByClassName('btn');
+
+const computerWeapon = () => {
+  let gameChoices = ["🪨", "📜", "✂"];
   let random = gameChoices[Math.floor(Math.random() * gameChoices.length)];
+
+  let computerWeapon = document.querySelector(".computer-weapon");
+  computerWeapon.textContent = random;
+  console.log("computerOption: ",random);
 
   return random;
 }
 
-const makeCaseInsensitive = (playerInput) => {
-  playerInput = prompt("Rock, Paper, or Scissors? ");
+const selectedWeapons = () => {
+  for  (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", computerWeapon);
+  }
+}
 
-  let firstLetter = playerInput.charAt(0);
-  let capitalizeFirstLetter = firstLetter.toUpperCase();
-
-
-  let restOfString = playerInput.slice(1,)
-  let lowerCaseString = restOfString.toLowerCase();
-
-  let fullString = `${capitalizeFirstLetter}${lowerCaseString}`;
-  return fullString;
+const playerWeapon = () => {
+  for (let i = 0 ; i < buttons.length; i++) {
+    buttons[i].addEventListener('click' , () => {
+      let playerSelection = buttons[i].textContent;
+      document.querySelector(".player-weapon").textContent = playerSelection;
+      console.log("playerOption: ",playerSelection);    
+    }); 
+  }
 }
 
 const playRound = (playerSelection, computerSelection) => {
   
-    playerSelection = makeCaseInsensitive();
-    computerSelection = computerPlay();
+  playerSelection = playerWeapon();
+  computerSelection = computerWeapon();
 
-    console.log("playerInput: ", playerSelection);
-    console.log("computerInput: ", computerSelection);
+  console.log("playerWeapon: ", playerSelection);
+  console.log("computerWeapon: ", computerSelection);
 
-    if (computerSelection === "Paper" && playerSelection === "Rock") {
-      return "Computer Wins!";
-    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-      return "You Win!";
-    }
-
-    if (computerSelection === "Scissors" && playerSelection === "Paper") {
-      return "Computer Wins!";
-    } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-      return "You Win!";
-    }
-
-    if (computerSelection === "Rock" && playerSelection === "Scissors") {
-      return "Computer Wins!";
-    } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-      return "You Win!";
-    }
-
-    if (computerSelection === playerSelection) {
-        return "Tie!";
-    }
-   
-}
-
-
-let playerWin = "You Win!";
-let computerWin = "Computer Wins!";
-let gameTie = "Tie!";
-let playerScoreCount = 0;
-let computerScoreCount = 0;
-
-
-const game = (result) => {
-  
-  for (let gameRound = 0; gameRound < 30; gameRound++) {
-      result = playRound();
-      if (result === playerWin) {
-          playerScoreCount ++;
-          console.log("player score: ", playerScoreCount);
-        } 
-
-        if (result === computerWin) {
-          computerScoreCount ++;
-          console.log("computer score: ", computerScoreCount);
-        }
-
-        if (playerScoreCount === 5 || computerScoreCount === 5) {
-          break;
-        }
-      } 
-}
-
-const congratsWinner = () => {
-  if (playerScoreCount === 5) {
-      return "Congratulations! You've Won!";
-    } 
-  
-    if (computerScoreCount === 5) {
-      return "Computer Wins. Play again?";
+  if (computerSelection === "📜" && playerSelection === "🪨") {
+    console.log("Computer Wins!");
+  } else if (playerSelection === "📜" && computerSelection === "🪨") {
+    console.log("You Win!");
   }
+
+  if (computerSelection === "✂" && playerSelection === "📜") {
+    console.log("Computer Wins!");
+  } else if (playerSelection === "✂" && computerSelection === "📜") {
+    console.log("You Win!");
+  }
+
+  if (computerSelection === "🪨" && playerSelection === "✂") {
+    console.log("Computer Wins!");
+  } else if (playerSelection === "🪨" && computerSelection === "✂") {
+    console.log("You Win!");
+  }
+
+  if (computerSelection === playerSelection) {
+      console.log("Tie!");
+  }
+ 
 }
 
-// computerPlay();
-// console.log(game());
-// console.log(congratsWinner());
 
-const buttons = document.querySelector('.rock-btn');
+console.log("selectedWeapon: ",selectedWeapons());
+console.log("playerWeapon: ",playerWeapon());
+// console.log("playRound: ", playRound());
 
-function checkCode() {
-  playRound();
-}
 
-buttons.addEventListener("click", checkCode );
+
+
+
+
+
+
+
+
+
+
 
 
 
