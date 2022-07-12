@@ -26,8 +26,8 @@ h2 {
     color:rgb(205, 167, 121);
 }
 
-.header-paragraph {
-    font-size: 30px;
+.subheader {
+    font-size: 40px;
     font-weight: 900;
 }
 
@@ -41,14 +41,20 @@ h4 {
     align-items: center;
     padding-top: 50px;
     font-family: 'Liu Jian Mao Cao', cursive;
-    font-size: 35px;    
+    font-size: 50px;    
 }
 
 .scoreBoard {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 150px;
+    padding-top: 100px;
+}
+
+.weapon {
+    text-align: center;
+    font-size: 10em;
+    font-weight: 100;
 }
 
 .score {
