@@ -7,6 +7,7 @@ Remember playing Rock, Paper, Scissors in your child hood and you had to use onl
 - Rock > Scissors
 - Scissors > Paper
 - Paper > Rock
+
 You will be playing against a "Computer" and whomever is the first to get 5 points win the game. To play another round, a popup will appear and you can click the "Play Again?" button and the page will refresh to a new game. Enjoy!
 
 # What I Learned
