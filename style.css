@@ -12,7 +12,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.25;
     font-family: 'Liu Jian Mao Cao', cursive;
 }
 
@@ -24,6 +24,10 @@ h1 {
 h2 {
     font-size: 50px;
     color:rgb(205, 167, 121);
+}
+
+h3 {
+    font-size: 60px;
 }
 
 .subheader {
@@ -41,19 +45,20 @@ h4 {
     align-items: center;
     padding-top: 50px;
     font-family: 'Liu Jian Mao Cao', cursive;
-    font-size: 50px;    
+    font-size: 50px;  
+    text-align: center;  
 }
 
 .scoreBoard {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .weapon {
     text-align: center;
-    font-size: 10em;
+    font-size: 100px;
     font-weight: 100;
 }
 
@@ -71,7 +76,7 @@ h4 {
 .buttons {
  display: flex;
  justify-content: center;
- margin-top: 80px;
+ margin-top: 30px;
 }
 
 .btn {
@@ -96,3 +101,45 @@ h4 {
     padding: 20px 0;
 }
 
+/* Pop UP Window CSS */
+.popUp-container {
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    opacity: .9;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    transition: transform 0.4s, top 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-header {
+    color:beige;
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popUp-container button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color:rgb(205, 167, 121);
+    color: beige;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.open-popUp {
+    visibility: visible;
+}
