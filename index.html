@@ -16,20 +16,21 @@
     <header>
         <h1>Rock Paper Scissors</h1>
         <h2 class="subheader">First to get 5 points wins!<h2/>
+        <h3 class="message-display">Choose Your Weapon</h3>
     </header>
     <main>
         <div class="game-message-display">
-            <h3 class="message-display">Choose Your Weapon</h3>
+            <span class="winner-message"></span>
         </div> 
         <div class="scoreBoard">
             <div class="left-column">
                 <p class="player-weapon weapon">x</p>
-                <h4>Your Score: <span class="score">0</span></h4>
+                <h4>Your Score: <span class="player-score score">0</span></h4>
             </div>
           
             <div class="right-column">
                 <p class="computer-weapon weapon">x</p>
-                <h4>Computer's Score: <span class="score">0</span></h4>
+                <h4>Computer's Score: <span class="computer-score score">0</span></h4>
             </div>
         </div>
 
@@ -45,7 +46,12 @@
         </footer>
        
     </div>
-  
+
+  <!-- Pop UP -->
+  <div class="popUp-container" id="popUp">
+        <span class="popup-header"></span>
+        <button type="button" class="play-btn">Play again?</button>
+  </div>
     <script src="app.js"></script>
 </body>
 </html>
